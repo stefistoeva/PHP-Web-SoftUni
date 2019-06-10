@@ -3,7 +3,7 @@ class DecimalNumber
 {
     private $number;
 
-    public function __construct($number)
+    public function __construct(string $number)
     {
         $this->number = $number;
     }
@@ -18,12 +18,12 @@ class DecimalNumber
         $this->number = $number;
     }
 
-    public function reversedOrder($number)
+    public function reversedOrder(): void
     {
-        echo strrev($number);
+        echo strrev($this->getNumber());
     }
 }
 
 $number = readline();
 $reversedNumber = new DecimalNumber($number);
-$reversedNumber->reversedOrder($reversedNumber->getNumber());
+$reversedNumber->reversedOrder();
