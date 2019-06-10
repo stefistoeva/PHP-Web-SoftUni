@@ -10,7 +10,7 @@ class Number
      * Number constructor.
      * @param $number
      */
-    public function __construct($number)
+    public function __construct(int $number)
     {
         $this->setNumber($number);
     }
@@ -31,27 +31,27 @@ class Number
         $this->number = $number;
     }
 
-    private function returnEnglishName(int $number): string
+    private function returnEnglishName(): string
     {
-        $lastDigit = $number % 10;
+        $lastDigit = $this->number % 10;
         switch ($lastDigit) {
-            case 0: return "zero"; break;
-            case 1: return "one"; break;
-            case 2: return "two"; break;
-            case 3: return "three"; break;
-            case 4: return "four"; break;
-            case 5: return "five"; break;
-            case 6: return "six"; break;
-            case 7: return "seven"; break;
-            case 8: return "eight"; break;
-            case 9: return "nine"; break;
+            case 0: return "zero";
+            case 1: return "one";
+            case 2: return "two";
+            case 3: return "three";
+            case 4: return "four";
+            case 5: return "five";
+            case 6: return "six";
+            case 7: return "seven";
+            case 8: return "eight";
+            case 9: return "nine";
         }
         return "";
     }
 
     public function __toString(): string
     {
-        $result = $this->returnEnglishName($this->getNumber());
+        $result = $this->returnEnglishName();
         return $result;
     }
 }
