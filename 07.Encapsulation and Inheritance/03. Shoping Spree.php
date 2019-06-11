@@ -179,12 +179,12 @@ class Product
 }
 
 
-$personsData = preg_split("/[=;]/", readline(), -1, PREG_SPLIT_NO_EMPTY);
+$personsData = preg_split("/[=;]/", readline(), -1);
 
-if (empty($personsData)) {
-    echo "Name cannot be empty";
-    die();
-}
+//if (empty($personsData)) {
+//    echo "Name cannot be empty";
+//    die();
+//}
 
 $people = [];
 for ($i = 0; $i < count($personsData) - 1; $i += 2) {
