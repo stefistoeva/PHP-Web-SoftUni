@@ -52,7 +52,6 @@ abstract class Characters
         $this->username = $username;
     }
 
-
     /**
      * @return int
      */
@@ -121,11 +120,9 @@ $specialPoints = $tokens[2];
 $level = $tokens[3];
 if ($type === "Demon") {
     $energy = floatval($specialPoints);
-    $player = new Demon($username, $energy, $level);
+    $player = new Demon($username, $level, $energy);
 } else if ($type === "Archangel") {
     $mana = intval($specialPoints);
-    $player = new Archangel($username, $mana, $level);
+    $player = new Archangel($username, $level,  $mana);
 }
 echo $player;
-
-//83/100
