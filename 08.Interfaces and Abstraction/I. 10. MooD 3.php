@@ -4,7 +4,7 @@ interface HashedPass
     public function hashingPass();
 }
 
-abstract class Characters
+abstract class Characters implements HashedPass
 {
     /** @var string */
     protected $username;
@@ -85,7 +85,7 @@ abstract class Characters
     }
 }
 
-class Demon extends Characters implements HashedPass
+class Demon extends Characters
 {
     public function hashingPass()
     {
@@ -99,7 +99,7 @@ class Demon extends Characters implements HashedPass
     }
 }
 
-class Archangel extends Characters implements HashedPass
+class Archangel extends Characters
 {
     public function hashingPass()
     {
